@@ -6,7 +6,7 @@ export const reportRepository = {
             'get_sales_summary',
             { p_start: start, p_end: end }
         );
-        if (error) throw new error;
+        if (error) throw error;
         return data?.[0] || {
             total_transactions: 0,
             total_revenue: 0,
@@ -24,11 +24,14 @@ export const reportRepository = {
     },
 
     getPaymentComplianceSummary: async (start, end) => {
+        const startDateStr = start instanceof Date ? start.toISOString().slice(0, 10) : String(start).slice(0, 10);
+        const endDateStr = end instanceof Date ? end.toISOString().slice(0, 10) : String(end).slice(0, 10);
+
         const { data, error } = await supabaseAdmin
            .from('payment_schedules')
-           .select('status, ammount')
-           .gte('due_date', start.slice(0, 10))
-           .lte('due_date', end.slice(0, 10));
+           .select('status, amount')
+           .gte('due_date', startDateStr)
+           .lte('due_date', endDateStr);
 
         if (error) throw error;
 
@@ -38,11 +41,10 @@ export const reportRepository = {
             overdue: { count: 0, amount: 0 },
         };
 
-
         for (const row of data || []) {
             if (summary[row.status]) {
                 summary[row.status].count += 1;
-                summary[row.status].amount += Number(row.amount);
+                summary[row.status].amount += Number(row.amount || 0);
             }
         }
 

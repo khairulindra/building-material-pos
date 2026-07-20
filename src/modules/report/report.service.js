@@ -20,7 +20,7 @@ async function generatePerformanceReport(period, referenceDate) {
         rangeStart: start,
         rangeEnd: end,
         salesSummary: {
-            totalTransactions: Number(salesSummary.total_transaction),
+            totalTransactions: Number(salesSummary.total_transactions || salesSummary.total_transactions || 0),
             totalRevenue: Number(salesSummary.total_revenue),
             averageTransaction: Number(salesSummary.average_transaction),
         },

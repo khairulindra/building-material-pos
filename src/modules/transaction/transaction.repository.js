@@ -50,7 +50,7 @@ export const transactionRepository = {
 
     findById: async (id) => {
         const { data, error } = await supabaseAdmin
-           .from('transaction')
+           .from('transactions')
            .select(SELECT_DETAIL)
            .eq('id', id)
            .maybeSingle();

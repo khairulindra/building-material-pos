@@ -7,10 +7,12 @@ export const checkout = asyncHandler(async (req, res) => {
     res.status(201).json(new ApiResponse(201, 'Transaksi berhasil diproses', data));
 });
 
+
 export const getAll = asyncHandler(async (req, res) => {
     const result = await transactionService.getAll(req.query);
-    res.status(200).json(new ApiResponse,(200, 'Berhasil mengambil daftar transaksi', result));
+    res.status(200).json(new ApiResponse(200, 'Berhasil mengambil daftar transaksi', result));
 });
+
 
 export const getById = asyncHandler(async (req, res) => {
     const data = await transactionService.getById(req.params.id);

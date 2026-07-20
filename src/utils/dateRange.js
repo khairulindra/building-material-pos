@@ -9,7 +9,7 @@ export function getDateRange(period, referenceDate = new Date()) {
     let start, end;
 
     if (period === 'weekly') {
-        const day = ref.getDay // 0 (Minggu) - 6 (Sabtu)
+        const day = ref.getDay() // 0 (Minggu) - 6 (Sabtu)
         const diffToMonday = day === 0 ? -6 : 1 - day;
         start = new Date(ref);
         start.setDate(ref.getDate() + diffToMonday);
@@ -25,6 +25,6 @@ export function getDateRange(period, referenceDate = new Date()) {
         throw new ApiError(400, "Parameter 'period' harus 'weekly' atau 'monthly'");
     }
 
-    return { start: start.toISOString(), end: end.toISOString };
+    return { start: start.toISOString(), end: end.toISOString() };
 
 }

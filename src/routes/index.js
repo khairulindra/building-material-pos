@@ -8,6 +8,7 @@ import storeRoutes from '../modules/store/store.routes.js';
 import scheduleRoutes from '../modules/schedule/schedule.routes.js';
 import transactionRoutes from '../modules/transaction/transaction.routes.js';
 import reportRoutes from '../modules/report/report.routes.js';
+import storeCategoryRoutes from '../modules/store_categories/storeCategory.routes.js';
 
 const router = Router();
 
@@ -27,5 +28,6 @@ router.use('/stores', storeRoutes);
 router.use('/schedules', scheduleRoutes);
 router.use('/transactions', transactionRoutes);
 router.use('/reports', reportRoutes);
+router.use('/store_categories', storeCategoryRoutes);
 
 export default router;

@@ -1,12 +1,12 @@
-# 🏪 POS Toko Bangunan Backend
+POS Toko Bangunan Backend
 
-Backend REST API untuk sistem **Point of Sale (POS) Toko Bangunan** yang dibangun menggunakan **Node.js**, **Express.js**, dan **Supabase PostgreSQL**.
+Backend REST API untuk sistem **Point of Sale (POS) Toko Bangunan** yang dibangun menggunakan Node.js, Express.js, dan Supabase PostgreSQL.
 
 Project ini dikembangkan sebagai backend yang menangani autentikasi, manajemen produk, kategori, stok, transaksi, laporan penjualan, dan scheduler.
 
 ---
 
-# 🚀 Tech Stack
+Tech Stack
 
 - Node.js
 - Express.js
@@ -19,7 +19,7 @@ Project ini dikembangkan sebagai backend yang menangani autentikasi, manajemen p
 
 ---
 
-# 📂 Struktur Project
+Struktur Project
 
 ```
 src/
@@ -37,6 +37,7 @@ src/
 │   ├── schedule/
 │   ├── store/
 │   └── transaction/
+|   └── store_categories/
 │
 ├── routes/
 └── utils/
@@ -44,7 +45,7 @@ src/
 
 ---
 
-# ✨ Fitur
+Fitur
 
 ## Authentication
 
@@ -90,7 +91,7 @@ src/
 
 ---
 
-# 📦 Installation
+Installation
 
 Clone repository
 
@@ -126,7 +127,7 @@ npm run dev
 
 ---
 
-# 🔑 Environment Variables
+Environment Variables
 
 Contoh isi `.env`
 
@@ -144,7 +145,7 @@ JWT_SECRET=
 
 ---
 
-# 📬 API Collection
+API Collection
 
 Import Postman Collection yang tersedia pada folder:
 
@@ -154,22 +155,22 @@ docs/postman_collection.json
 
 ---
 
-# 🛠 API Modules
+API Modules
 
 | Module | Status |
 |---------|--------|
-| Authentication | ✅ |
-| Store | ✅ |
-| Category | ✅ |
-| Product | ✅ |
-| Inventory | ✅ |
-| Transaction | ✅ |
-| Report | ✅ |
-| Scheduler | ✅ |
+| Authentication | Work |
+| Store | Work |
+| Category | Work |
+| Product | Work |
+| Inventory | Work |
+| Transaction | Work |
+| Report | Work |
+| Scheduler | Work |
 
 ---
 
-# 📖 Arsitektur
+Arsitektur
 
 Project menggunakan pendekatan modular.
 
@@ -209,7 +210,7 @@ Dengan struktur tersebut setiap layer memiliki tanggung jawab yang jelas sehingg
 
 ---
 
-# 📌 Future Improvement
+Future Improvement
 
 - Swagger Documentation
 - Unit Testing
@@ -221,9 +222,9 @@ Dengan struktur tersebut setiap layer memiliki tanggung jawab yang jelas sehingg
 
 ---
 
-# 👨‍💻 Author
+Author
 
-**Khairul Indra**
+**Khairul Indra Styawan**
 
 GitHub
 
@@ -231,6 +232,6 @@ https://github.com/khairulindra
 
 ---
 
-# 📄 License
+License
 
 Project ini dibuat untuk keperluan pembelajaran, pengembangan portofolio, dan penelitian.
